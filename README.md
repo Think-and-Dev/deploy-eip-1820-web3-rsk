@@ -4,13 +4,12 @@ Ethereum [EIP 1820](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1820.m
 
 This library ensures that the EIP 1820 registry smart contract exists on any given chain.  Particularly useful for test environments.
 
-Uses [ethers.js v5](https://docs.ethers.io/v5).
+Uses [web3.js v1.3.5](https://web3js.readthedocs.io/en/v1.3.5/).
 
-If you're using ethers.js v4 then try the 0.2 version.
 
 # Setup
 
-Install `deploy-eip-1820-rsk` via yarn:
+Install `@thinkanddev/deploy-eip-1820-web3-rsk` via yarn:
 
 ```sh
 $ yarn add deploy-eip-1820-rsk
@@ -27,15 +26,14 @@ $ npm i deploy-eip-1820-rsk
 To ensure that the EIP 1820 Registry contract exists on the network you are using, use the `setup1820` function:
 
 ```javascript
-const { deploy1820 } = require('deploy-eip-1820-rsk')
+const { deploy1820 } = require('@thinkanddev/deploy-eip-1820-web3-rsk')
 
 async function deploy() {
-    const wallet = ethers.Wallet.fromMnemonic("...your mnemonic...")
     // The wallet must have at least 0.08 Ether
-    const registryContract = await deploy1820(wallet)
+    const registryContract = await deploy1820(web3)
 
-    // Now we have an Ethers Contract instance for the ERC1820 Registry contract
-    let implementer = await registryContract.getInterfaceImplementer('0x1234...', '0xINTERFACE_HASH')
+    // Now we have an Web3 Contract instance for the ERC1820 Registry contract
+    let implementer = await registryContract.methods.getInterfaceImplementer('0x1234...', '0xINTERFACE_HASH').call()
 }
 
 ```
