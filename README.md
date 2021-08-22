@@ -12,13 +12,13 @@ Uses [web3.js v1.3.5](https://web3js.readthedocs.io/en/v1.3.5/).
 Install `@thinkanddev/deploy-eip-1820-web3-rsk` via yarn:
 
 ```sh
-$ yarn add deploy-eip-1820-rsk
+$ yarn add @thinkanddev/deploy-eip-1820-rsk
 ```
 
 or npm:
 
 ```sh
-$ npm i deploy-eip-1820-rsk
+$ npm i @thinkanddev/deploy-eip-1820-rsk
 ```
 
 # Usage
