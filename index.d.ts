@@ -1,1 +1,1 @@
-declare module 'deploy-eip-1820';
+declare module '@thinkanddev/deploy-eip-1820-web3-rsk';

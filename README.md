@@ -23,7 +23,7 @@ $ npm i @thinkanddev/deploy-eip-1820-rsk
 
 # Usage
 
-To ensure that the EIP 1820 Registry contract exists on the network you are using, use the `setup1820` function:
+To deploy EIP 1820 Registry contract on the network you are using
 
 ```javascript
 const { deploy1820 } = require('@thinkanddev/deploy-eip-1820-web3-rsk')
